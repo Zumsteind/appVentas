@@ -9,3 +9,14 @@ C:\Users\test\Desktop\prueba trabajo\proyecto\examen\negocio\bin\Debug\entidades
 C:\Users\test\Desktop\prueba trabajo\proyecto\examen\negocio\obj\Debug\negocio.csproj.CopyComplete
 C:\Users\test\Desktop\prueba trabajo\proyecto\examen\negocio\obj\Debug\negocio.dll
 C:\Users\test\Desktop\prueba trabajo\proyecto\examen\negocio\obj\Debug\negocio.pdb
+C:\Users\test\Desktop\appVentas\prueba trabajo\proyecto\examen\negocio\bin\Debug\negocio.dll
+C:\Users\test\Desktop\appVentas\prueba trabajo\proyecto\examen\negocio\bin\Debug\negocio.pdb
+C:\Users\test\Desktop\appVentas\prueba trabajo\proyecto\examen\negocio\bin\Debug\datos.dll
+C:\Users\test\Desktop\appVentas\prueba trabajo\proyecto\examen\negocio\bin\Debug\entidades.dll
+C:\Users\test\Desktop\appVentas\prueba trabajo\proyecto\examen\negocio\bin\Debug\datos.pdb
+C:\Users\test\Desktop\appVentas\prueba trabajo\proyecto\examen\negocio\bin\Debug\entidades.pdb
+C:\Users\test\Desktop\appVentas\prueba trabajo\proyecto\examen\negocio\obj\Debug\negocio.csproj.AssemblyReference.cache
+C:\Users\test\Desktop\appVentas\prueba trabajo\proyecto\examen\negocio\obj\Debug\negocio.csproj.CoreCompileInputs.cache
+C:\Users\test\Desktop\appVentas\prueba trabajo\proyecto\examen\negocio\obj\Debug\negocio.csproj.CopyComplete
+C:\Users\test\Desktop\appVentas\prueba trabajo\proyecto\examen\negocio\obj\Debug\negocio.dll
+C:\Users\test\Desktop\appVentas\prueba trabajo\proyecto\examen\negocio\obj\Debug\negocio.pdb

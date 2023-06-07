@@ -34,6 +34,7 @@ namespace vistaE
             this.menuagregarcliente = new System.Windows.Forms.ToolStripMenuItem();
             this.menuagregarproducto = new System.Windows.Forms.ToolStripMenuItem();
             this.listarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.listarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -52,7 +53,8 @@ namespace vistaE
             this.menuarchivo.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.menuagregarcliente,
             this.menuagregarproducto,
-            this.listarClientesToolStripMenuItem});
+            this.listarClientesToolStripMenuItem,
+            this.listarProductosToolStripMenuItem});
             this.menuarchivo.Name = "menuarchivo";
             this.menuarchivo.Size = new System.Drawing.Size(60, 20);
             this.menuarchivo.Text = "Archivo";
@@ -78,6 +80,13 @@ namespace vistaE
             this.listarClientesToolStripMenuItem.Text = "Listar clientes";
             this.listarClientesToolStripMenuItem.Click += new System.EventHandler(this.listarClientesToolStripMenuItem_Click);
             // 
+            // listarProductosToolStripMenuItem
+            // 
+            this.listarProductosToolStripMenuItem.Name = "listarProductosToolStripMenuItem";
+            this.listarProductosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listarProductosToolStripMenuItem.Text = "Listar productos";
+            this.listarProductosToolStripMenuItem.Click += new System.EventHandler(this.listarProductosToolStripMenuItem_Click);
+            // 
             // principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -102,5 +111,6 @@ namespace vistaE
         private System.Windows.Forms.ToolStripMenuItem menuagregarcliente;
         private System.Windows.Forms.ToolStripMenuItem menuagregarproducto;
         private System.Windows.Forms.ToolStripMenuItem listarClientesToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem listarProductosToolStripMenuItem;
     }
 }

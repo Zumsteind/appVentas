@@ -35,5 +35,11 @@ namespace vistaE
 
             ventana.ShowDialog();
         }
+
+        private void listarProductosToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            listarproductos ventana = new listarproductos();
+            ventana.ShowDialog();
+        }
     }
 }

@@ -18,19 +18,18 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("SELECT ID, Nombre, Precio, Categoria FROM productos");
-
+                datos.setearConsulta("SELECT ID, ISNULL(Nombre, '') as Nombre, ISNULL(Precio, 0.0) as Precio, ISNULL(Categoria, '') as Categoria FROM productos");
                 datos.lecturaDatos();
 
                 while (datos.Lector.Read())
                 {
-                    Producto aux = new Producto();
-                    aux.Id = (int)datos.Lector["ID"];
-                    aux.Nombre = (string)datos.Lector["Nombre"];
-                    aux.Precio = (float)datos.Lector["Precio"];
-                    aux.Categoria = (string)datos.Lector["Categoria"];
+                    Producto producto = new Producto();
+                    producto.Id = Convert.ToInt32(datos.Lector["ID"]);
+                    producto.Nombre = datos.Lector["Nombre"].ToString();
+                    producto.Precio = Convert.ToSingle(datos.Lector["Precio"]);
+                    producto.Categoria = datos.Lector["Categoria"].ToString();
 
-                    lista.Add(aux);
+                    lista.Add(producto);
                 }
 
                 return lista;
