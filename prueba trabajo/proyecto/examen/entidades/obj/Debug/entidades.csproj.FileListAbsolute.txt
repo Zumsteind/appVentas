@@ -1,0 +1,6 @@
+C:\Users\test\Desktop\prueba trabajo\proyecto\examen\entidades\obj\Debug\entidades.csproj.AssemblyReference.cache
+C:\Users\test\Desktop\prueba trabajo\proyecto\examen\entidades\obj\Debug\entidades.csproj.CoreCompileInputs.cache
+C:\Users\test\Desktop\prueba trabajo\proyecto\examen\entidades\bin\Debug\entidades.dll
+C:\Users\test\Desktop\prueba trabajo\proyecto\examen\entidades\bin\Debug\entidades.pdb
+C:\Users\test\Desktop\prueba trabajo\proyecto\examen\entidades\obj\Debug\entidades.dll
+C:\Users\test\Desktop\prueba trabajo\proyecto\examen\entidades\obj\Debug\entidades.pdb
