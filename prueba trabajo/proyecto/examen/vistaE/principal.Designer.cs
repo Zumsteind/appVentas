@@ -35,13 +35,16 @@ namespace vistaE
             this.menuagregarproducto = new System.Windows.Forms.ToolStripMenuItem();
             this.listarClientesToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.listarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modificarOEliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarOModificarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
             // menuStrip1
             // 
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.menuarchivo});
+            this.menuarchivo,
+            this.modificarOEliminarToolStripMenuItem});
             this.menuStrip1.Location = new System.Drawing.Point(0, 0);
             this.menuStrip1.Name = "menuStrip1";
             this.menuStrip1.Size = new System.Drawing.Size(800, 24);
@@ -56,8 +59,8 @@ namespace vistaE
             this.listarClientesToolStripMenuItem,
             this.listarProductosToolStripMenuItem});
             this.menuarchivo.Name = "menuarchivo";
-            this.menuarchivo.Size = new System.Drawing.Size(60, 20);
-            this.menuarchivo.Text = "Archivo";
+            this.menuarchivo.Size = new System.Drawing.Size(40, 20);
+            this.menuarchivo.Text = "Alta";
             // 
             // menuagregarcliente
             // 
@@ -87,6 +90,21 @@ namespace vistaE
             this.listarProductosToolStripMenuItem.Text = "Listar productos";
             this.listarProductosToolStripMenuItem.Click += new System.EventHandler(this.listarProductosToolStripMenuItem_Click);
             // 
+            // modificarOEliminarToolStripMenuItem
+            // 
+            this.modificarOEliminarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.eliminarOModificarClienteToolStripMenuItem});
+            this.modificarOEliminarToolStripMenuItem.Name = "modificarOEliminarToolStripMenuItem";
+            this.modificarOEliminarToolStripMenuItem.Size = new System.Drawing.Size(126, 20);
+            this.modificarOEliminarToolStripMenuItem.Text = "Modificar o eliminar";
+            // 
+            // eliminarOModificarClienteToolStripMenuItem
+            // 
+            this.eliminarOModificarClienteToolStripMenuItem.Name = "eliminarOModificarClienteToolStripMenuItem";
+            this.eliminarOModificarClienteToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.eliminarOModificarClienteToolStripMenuItem.Text = "Eliminar o Modificar cliente";
+            this.eliminarOModificarClienteToolStripMenuItem.Click += new System.EventHandler(this.eliminarOModificarClienteToolStripMenuItem_Click);
+            // 
             // principal
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -112,5 +130,7 @@ namespace vistaE
         private System.Windows.Forms.ToolStripMenuItem menuagregarproducto;
         private System.Windows.Forms.ToolStripMenuItem listarClientesToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem listarProductosToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modificarOEliminarToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarOModificarClienteToolStripMenuItem;
     }
 }

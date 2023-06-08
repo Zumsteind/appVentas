@@ -41,5 +41,12 @@ namespace vistaE
             listarproductos ventana = new listarproductos();
             ventana.ShowDialog();
         }
+
+        private void eliminarOModificarClienteToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            modificar_eleminar_cliente ventana = new modificar_eleminar_cliente();
+            ventana.ShowDialog();
+
+        }
     }
 }

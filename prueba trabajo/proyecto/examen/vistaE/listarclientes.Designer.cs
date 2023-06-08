@@ -40,6 +40,7 @@ namespace vistaE
             this.dgvlistarcliente.Name = "dgvlistarcliente";
             this.dgvlistarcliente.Size = new System.Drawing.Size(557, 306);
             this.dgvlistarcliente.TabIndex = 0;
+            this.dgvlistarcliente.SelectionChanged += new System.EventHandler(this.dgvlistarcliente_SelectionChanged);
             // 
             // listarclientes
             // 

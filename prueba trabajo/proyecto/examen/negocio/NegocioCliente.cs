@@ -73,7 +73,7 @@ namespace negocio
                 }
             }
 
-            public void modificarCliente(Clientes cliente)
+            public Boolean modificarCliente(Clientes cliente)
             {
                 try
                 {
@@ -84,10 +84,11 @@ namespace negocio
                     datos.SetearParametro("@ID", cliente.Id);
 
                     datos.ejecutarAccion();
+                return true;
                 }
                 catch (Exception ex)
                 {
-                    throw ex;
+                return false;
                 }
                 finally
                 {
@@ -95,7 +96,7 @@ namespace negocio
                 }
             }
 
-            public void eliminarCliente(int idCliente)
+            public Boolean eliminarCliente(int idCliente)
             {
                 try
                 {
@@ -103,10 +104,12 @@ namespace negocio
                     datos.SetearParametro("@ID", idCliente);
 
                     datos.ejecutarAccion();
+                return true;
                 }
                 catch (Exception ex)
                 {
-                    throw ex;
+                return false;
+                   
                 }
                 finally
                 {

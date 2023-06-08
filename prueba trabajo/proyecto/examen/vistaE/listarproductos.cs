@@ -29,5 +29,10 @@ namespace vistaE
 
 
         }
+
+        private void dgvlistarproductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
+
+        }
     }
 }

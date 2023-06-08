@@ -14,6 +14,8 @@ namespace vistaE
 {
     public partial class listarclientes : Form
     {
+        private List<Clientes> clientes;
+
         public listarclientes()
         {
             InitializeComponent();
@@ -21,30 +23,15 @@ namespace vistaE
 
         private void listarclientes_Load(object sender, EventArgs e)
         {
-            dgvlistarcliente.AutoGenerateColumns = false;
-
-            // Agrega las columnas necesarias al DataGridView
-            dgvlistarcliente.Columns.Add("ID", "ID");
-            dgvlistarcliente.Columns.Add("Cliente", "Cliente");
-            dgvlistarcliente.Columns.Add("Telefono", "Teléfono");
-            dgvlistarcliente.Columns.Add("Correo", "Correo");
-
-            // Configura las propiedades DataPropertyName de cada columna
-            dgvlistarcliente.Columns["ID"].DataPropertyName = "id";
-            dgvlistarcliente.Columns["Cliente"].DataPropertyName = "cliente";
-            dgvlistarcliente.Columns["Telefono"].DataPropertyName = "telefono";
-            dgvlistarcliente.Columns["Correo"].DataPropertyName = "correo";
-
-            // Establece el DataSource después de configurar las columnas
-
-
+           
 
 
             NegocioCliente negocio = new NegocioCliente();
           
 
-            List<Clientes> clientes = negocio.listarclientes();
+             clientes = negocio.listarclientes();
 
+            //verifica si las filas de la lista es mayor a 0, queire decir que tiene elementos. y asocia a lista al dgvlistar
             if (clientes.Count > 0)
             {
                 dgvlistarcliente.DataSource = clientes;
@@ -54,12 +41,17 @@ namespace vistaE
                 MessageBox.Show("No se encontraron clientes.");
             }
 
-            dgvlistarcliente.DataSource = clientes;
+           
 
 
 
         }
 
+        private void dgvlistarcliente_SelectionChanged(object sender, EventArgs e)
+        {
+            //capturamos en un obj cliente, el elemento seleccionado de la grilla, tabla, que lo casteamos a un cliente, ya que sabemos q se esta devolviendo un obj cliente
+          Clientes clienteselecionado= (Clientes)dgvlistarcliente.CurrentRow.DataBoundItem;
+        }
     }
     }
 

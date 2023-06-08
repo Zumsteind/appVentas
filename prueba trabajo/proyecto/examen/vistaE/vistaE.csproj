@@ -70,6 +70,12 @@
     <Compile Include="listarproductos.Designer.cs">
       <DependentUpon>listarproductos.cs</DependentUpon>
     </Compile>
+    <Compile Include="modificar_eleminar_cliente.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modificar_eleminar_cliente.Designer.cs">
+      <DependentUpon>modificar_eleminar_cliente.cs</DependentUpon>
+    </Compile>
     <Compile Include="principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -89,6 +95,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="listarproductos.resx">
       <DependentUpon>listarproductos.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modificar_eleminar_cliente.resx">
+      <DependentUpon>modificar_eleminar_cliente.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="principal.resx">
       <DependentUpon>principal.cs</DependentUpon>

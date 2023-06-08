@@ -39,3 +39,4 @@ C:\Users\test\Desktop\appVentas\prueba trabajo\proyecto\examen\vistaE\obj\Debug\
 C:\Users\test\Desktop\appVentas\prueba trabajo\proyecto\examen\vistaE\obj\Debug\vistaE.csproj.CopyComplete
 C:\Users\test\Desktop\appVentas\prueba trabajo\proyecto\examen\vistaE\obj\Debug\vistaE.exe
 C:\Users\test\Desktop\appVentas\prueba trabajo\proyecto\examen\vistaE\obj\Debug\vistaE.pdb
+C:\Users\test\Desktop\appVentas\prueba trabajo\proyecto\examen\vistaE\obj\Debug\vistaE.modificar_eleminar_cliente.resources
