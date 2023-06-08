@@ -37,6 +37,7 @@ namespace vistaE
             this.listarProductosToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.modificarOEliminarToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eliminarOModificarClienteToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.eliminarOModificarProductoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -65,35 +66,36 @@ namespace vistaE
             // menuagregarcliente
             // 
             this.menuagregarcliente.Name = "menuagregarcliente";
-            this.menuagregarcliente.Size = new System.Drawing.Size(180, 22);
+            this.menuagregarcliente.Size = new System.Drawing.Size(168, 22);
             this.menuagregarcliente.Text = "Agregar cliente";
             this.menuagregarcliente.Click += new System.EventHandler(this.menuagregarcliente_Click);
             // 
             // menuagregarproducto
             // 
             this.menuagregarproducto.Name = "menuagregarproducto";
-            this.menuagregarproducto.Size = new System.Drawing.Size(180, 22);
+            this.menuagregarproducto.Size = new System.Drawing.Size(168, 22);
             this.menuagregarproducto.Text = "Agregar producto";
             this.menuagregarproducto.Click += new System.EventHandler(this.menuagregarproducto_Click);
             // 
             // listarClientesToolStripMenuItem
             // 
             this.listarClientesToolStripMenuItem.Name = "listarClientesToolStripMenuItem";
-            this.listarClientesToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listarClientesToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.listarClientesToolStripMenuItem.Text = "Listar clientes";
             this.listarClientesToolStripMenuItem.Click += new System.EventHandler(this.listarClientesToolStripMenuItem_Click);
             // 
             // listarProductosToolStripMenuItem
             // 
             this.listarProductosToolStripMenuItem.Name = "listarProductosToolStripMenuItem";
-            this.listarProductosToolStripMenuItem.Size = new System.Drawing.Size(180, 22);
+            this.listarProductosToolStripMenuItem.Size = new System.Drawing.Size(168, 22);
             this.listarProductosToolStripMenuItem.Text = "Listar productos";
             this.listarProductosToolStripMenuItem.Click += new System.EventHandler(this.listarProductosToolStripMenuItem_Click);
             // 
             // modificarOEliminarToolStripMenuItem
             // 
             this.modificarOEliminarToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.eliminarOModificarClienteToolStripMenuItem});
+            this.eliminarOModificarClienteToolStripMenuItem,
+            this.eliminarOModificarProductoToolStripMenuItem});
             this.modificarOEliminarToolStripMenuItem.Name = "modificarOEliminarToolStripMenuItem";
             this.modificarOEliminarToolStripMenuItem.Size = new System.Drawing.Size(126, 20);
             this.modificarOEliminarToolStripMenuItem.Text = "Modificar o eliminar";
@@ -101,9 +103,16 @@ namespace vistaE
             // eliminarOModificarClienteToolStripMenuItem
             // 
             this.eliminarOModificarClienteToolStripMenuItem.Name = "eliminarOModificarClienteToolStripMenuItem";
-            this.eliminarOModificarClienteToolStripMenuItem.Size = new System.Drawing.Size(219, 22);
+            this.eliminarOModificarClienteToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
             this.eliminarOModificarClienteToolStripMenuItem.Text = "Eliminar o Modificar cliente";
             this.eliminarOModificarClienteToolStripMenuItem.Click += new System.EventHandler(this.eliminarOModificarClienteToolStripMenuItem_Click);
+            // 
+            // eliminarOModificarProductoToolStripMenuItem
+            // 
+            this.eliminarOModificarProductoToolStripMenuItem.Name = "eliminarOModificarProductoToolStripMenuItem";
+            this.eliminarOModificarProductoToolStripMenuItem.Size = new System.Drawing.Size(233, 22);
+            this.eliminarOModificarProductoToolStripMenuItem.Text = "Eliminar o Modificar Producto";
+            this.eliminarOModificarProductoToolStripMenuItem.Click += new System.EventHandler(this.eliminarOModificarProductoToolStripMenuItem_Click);
             // 
             // principal
             // 
@@ -132,5 +141,6 @@ namespace vistaE
         private System.Windows.Forms.ToolStripMenuItem listarProductosToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modificarOEliminarToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem eliminarOModificarClienteToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem eliminarOModificarProductoToolStripMenuItem;
     }
 }

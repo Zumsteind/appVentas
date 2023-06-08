@@ -58,6 +58,12 @@
     <Compile Include="agregarproducto.Designer.cs">
       <DependentUpon>agregarproducto.cs</DependentUpon>
     </Compile>
+    <Compile Include="agregarventa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="agregarventa.Designer.cs">
+      <DependentUpon>agregarventa.cs</DependentUpon>
+    </Compile>
     <Compile Include="listarclientes.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -76,6 +82,12 @@
     <Compile Include="modificar_eleminar_cliente.Designer.cs">
       <DependentUpon>modificar_eleminar_cliente.cs</DependentUpon>
     </Compile>
+    <Compile Include="modificar_eliminar_producto.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modificar_eliminar_producto.Designer.cs">
+      <DependentUpon>modificar_eliminar_producto.cs</DependentUpon>
+    </Compile>
     <Compile Include="principal.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -90,6 +102,9 @@
     <EmbeddedResource Include="agregarproducto.resx">
       <DependentUpon>agregarproducto.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="agregarventa.resx">
+      <DependentUpon>agregarventa.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="listarclientes.resx">
       <DependentUpon>listarclientes.cs</DependentUpon>
     </EmbeddedResource>
@@ -98,6 +113,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="modificar_eleminar_cliente.resx">
       <DependentUpon>modificar_eleminar_cliente.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="modificar_eliminar_producto.resx">
+      <DependentUpon>modificar_eliminar_producto.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="principal.resx">
       <DependentUpon>principal.cs</DependentUpon>

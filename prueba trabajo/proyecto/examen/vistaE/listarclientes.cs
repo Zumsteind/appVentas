@@ -52,6 +52,20 @@ namespace vistaE
             //capturamos en un obj cliente, el elemento seleccionado de la grilla, tabla, que lo casteamos a un cliente, ya que sabemos q se esta devolviendo un obj cliente
           Clientes clienteselecionado= (Clientes)dgvlistarcliente.CurrentRow.DataBoundItem;
         }
+
+        private void txtbuscarcliente_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void txtbuscarcliente_TextChanged(object sender, EventArgs e)
+        {
+            NegocioCliente negocio = new NegocioCliente();
+            
+
+            dgvlistarcliente.DataSource= negocio.buscarClientes(txtbuscarcliente.Text);
+
+        }
     }
     }
 

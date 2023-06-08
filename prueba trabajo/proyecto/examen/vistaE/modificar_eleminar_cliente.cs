@@ -137,5 +137,11 @@ namespace vistaE
             
 
         }
+
+        private void txtbcliente_TextChanged(object sender, EventArgs e)
+        {
+            NegocioCliente negocio = new NegocioCliente();
+            dgvlistaclientes.DataSource = negocio.buscarClientes(txtbcliente.Text);
+        }
     }
 }

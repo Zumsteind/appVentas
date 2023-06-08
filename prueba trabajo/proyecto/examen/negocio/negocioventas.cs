@@ -8,34 +8,28 @@ using datos;
 
 namespace negocio
 {
-    public class NegocioVentasItems
+    public class NegocioVentas
     {
         private accesoDato datos = new accesoDato();
 
-        public List<Ventasitems> ListarVentasItems()
+        public List<Ventas> ListarVentas()
         {
-            List<Ventasitems> lista = new List<Ventasitems>();
+            List<Ventas> lista = new List<Ventas>();
 
             try
             {
-                datos.setearConsulta("SELECT ID, IDVentas, IDProducto, PrecioUnitario, Cantidad FROM Ventasitems");
+                datos.setearConsulta("SELECT id, idcliente, fecha, total FROM ventas");
                 datos.lecturaDatos();
 
                 while (datos.Lector.Read())
                 {
-                    Ventasitems aux = new Ventasitems();
-                    aux.id = (int)datos.Lector["ID"];
-                    aux.idventas = new Ventas() { id = (int)datos.Lector["IDVentas"] };
+                    Ventas venta = new Ventas();
+                    venta.id = Convert.ToInt32(datos.Lector["id"]);
+                    venta.idcliente = new Clientes() { Id = Convert.ToInt32(datos.Lector["idcliente"]) };
+                    venta.fecha = Convert.ToDateTime(datos.Lector["fecha"]);
+                    venta.total = Convert.ToSingle(datos.Lector["total"]);
 
-                    // Crear objeto Producto y establecer su propiedad Id utilizando el método SetId()
-                    Producto producto = new Producto();
-                    producto.Id=((int)datos.Lector["IDProducto"]);
-                    aux.idproducto = producto;
-
-                    aux.preciounitario = (float)datos.Lector["PrecioUnitario"];
-                    aux.cantidad = (float)datos.Lector["Cantidad"];
-
-                    lista.Add(aux);
+                    lista.Add(venta);
                 }
 
                 return lista;
@@ -50,15 +44,14 @@ namespace negocio
             }
         }
 
-        public bool AgregarVentaItem(Ventasitems ventaItem)
+        public bool AgregarVenta(Ventas venta)
         {
             try
             {
-                datos.setearConsulta("INSERT INTO Ventasitems (IDVentas, IDProducto, PrecioUnitario, Cantidad) VALUES (@IDVentas, @IDProducto, @PrecioUnitario, @Cantidad)");
-                datos.SetearParametro("@IDVentas", ventaItem.idventas.id);
-                datos.SetearParametro("@IDProducto", ventaItem.idproducto.Id);
-                datos.SetearParametro("@PrecioUnitario", ventaItem.preciounitario);
-                datos.SetearParametro("@Cantidad", ventaItem.cantidad);
+                datos.setearConsulta("INSERT INTO ventas (idcliente, fecha, total) VALUES (@idcliente, @fecha, @total)");
+                datos.SetearParametro("@idcliente", venta.idcliente.Id);
+                datos.SetearParametro("@fecha", venta.fecha);
+                datos.SetearParametro("@total", venta.total);
 
                 datos.ejecutarAccion();
                 return true;
@@ -73,22 +66,42 @@ namespace negocio
             }
         }
 
-        public void ModificarVentaItem(Ventasitems ventaItem)
+        public bool ModificarVenta(Ventas venta)
         {
             try
             {
-                datos.setearConsulta("UPDATE Ventasitems SET IDVentas = @IDVentas, IDProducto = @IDProducto, PrecioUnitario = @PrecioUnitario, Cantidad = @Cantidad WHERE ID = @ID");
-                datos.SetearParametro("@IDVentas", ventaItem.idventas.id);
-                datos.SetearParametro("@IDProducto", ventaItem.idproducto.Id);
-                datos.SetearParametro("@PrecioUnitario", ventaItem.preciounitario);
-                datos.SetearParametro("@Cantidad", ventaItem.cantidad);
-                datos.SetearParametro("@ID", ventaItem.id);
+                datos.setearConsulta("UPDATE ventas SET idcliente = @idcliente, fecha = @fecha, total = @total WHERE id = @id");
+                datos.SetearParametro("@idcliente", venta.idcliente.Id);
+                datos.SetearParametro("@fecha", venta.fecha);
+                datos.SetearParametro("@total", venta.total);
+                datos.SetearParametro("@id", venta.id);
 
                 datos.ejecutarAccion();
+                return true;
             }
             catch (Exception ex)
             {
-                throw ex;
+                return false;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public bool EliminarVenta(int idVenta)
+        {
+            try
+            {
+                datos.setearConsulta("DELETE FROM ventas WHERE id = @id");
+                datos.SetearParametro("@id", idVenta);
+
+                datos.ejecutarAccion();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
             }
             finally
             {

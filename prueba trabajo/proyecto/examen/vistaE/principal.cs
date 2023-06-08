@@ -48,5 +48,11 @@ namespace vistaE
             ventana.ShowDialog();
 
         }
+
+        private void eliminarOModificarProductoToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            modificar_eliminar_producto ventana = new modificar_eliminar_producto();
+            ventana.ShowDialog();
+        }
     }
 }

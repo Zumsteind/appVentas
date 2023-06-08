@@ -66,7 +66,7 @@ namespace negocio
             }
         }
 
-        public void ModificarProducto(Producto producto)
+        public Boolean ModificarProducto(Producto producto)
         {
             try
             {
@@ -77,10 +77,11 @@ namespace negocio
                 datos.SetearParametro("@ID", producto.Id);
 
                 datos.ejecutarAccion();
+                return true;
             }
             catch (Exception ex)
             {
-                throw ex;
+                return false;
             }
             finally
             {
@@ -88,7 +89,7 @@ namespace negocio
             }
         }
 
-        public void EliminarProducto(int idProducto)
+        public Boolean EliminarProducto(int idProducto)
         {
             try
             {
@@ -96,6 +97,42 @@ namespace negocio
                 datos.SetearParametro("@ID", idProducto);
 
                 datos.ejecutarAccion();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public List<Producto> buscarProductos(string filtroNombre)
+        {
+            List<Producto> lista = new List<Producto>();
+
+            try
+            {
+                string consulta = "SELECT ID, ISNULL(Nombre, '') as Nombre, ISNULL(Precio, 0.0) as Precio, ISNULL(Categoria, '') as Categoria FROM productos WHERE Nombre LIKE '%' + @FiltroNombre + '%'";
+                datos.setearConsulta(consulta);
+                datos.SetearParametro("@FiltroNombre", filtroNombre);
+
+                datos.lecturaDatos();
+
+                while (datos.Lector.Read())
+                {
+                    Producto producto = new Producto();
+                    producto.Id = Convert.ToInt32(datos.Lector["ID"]);
+                    producto.Nombre = datos.Lector["Nombre"].ToString();
+                    producto.Precio = Convert.ToSingle(datos.Lector["Precio"]);
+                    producto.Categoria = datos.Lector["Categoria"].ToString();
+
+                    lista.Add(producto);
+                }
+
+                return lista;
             }
             catch (Exception ex)
             {

@@ -118,7 +118,43 @@ namespace negocio
             }
 
 
-        }
+        public List<Clientes> buscarClientes(string filtroCliente)
+        {
+            List<Clientes> lista = new List<Clientes>();
+
+            try
+            {
+                string consulta = "SELECT ID, Cliente, Telefono, Correo FROM clientes WHERE Cliente LIKE '%' + @FiltroCliente + '%'";
+                datos.setearConsulta(consulta);
+                datos.SetearParametro("@FiltroCliente", filtroCliente);
+
+                datos.lecturaDatos();
+
+                while (datos.Lector.Read())
+                {
+                    Clientes cliente = new Clientes();
+                    cliente.Id = Convert.ToInt32(datos.Lector["ID"]);
+                    cliente.Cliente = datos.Lector["Cliente"].ToString();
+                    cliente.Telefono = datos.Lector["Telefono"].ToString();
+                    cliente.Correo = datos.Lector["Correo"].ToString();
+
+                    lista.Add(cliente);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        
+         }
+
+    }
 
 
 }
