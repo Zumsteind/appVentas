@@ -12,6 +12,7 @@ namespace negocio
     {
         private accesoDato datos = new accesoDato();
 
+
         public List<Ventas> ListarVentas()
         {
             List<Ventas> lista = new List<Ventas>();
@@ -108,5 +109,33 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+        public int ObtenerUltimoIDGenerado()
+        {
+            int ultimoID = 0;
+            try
+            {
+                datos.setearConsulta("SELECT MAX(id) FROM ventas");
+                datos.lecturaDatos();
+
+                if (datos.Lector.Read() && !datos.Lector.IsDBNull(0))
+                {
+                    ultimoID = Convert.ToInt32(datos.Lector[0]);
+                }
+            }
+            catch (Exception)
+            {
+                // Manejar el error adecuadamente
+                // ...
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+            return ultimoID;
+        }
+
+
+
     }
 }

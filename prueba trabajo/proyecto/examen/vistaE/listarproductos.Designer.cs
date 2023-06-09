@@ -40,7 +40,7 @@ namespace vistaE
             this.dgvlistarproductos.Name = "dgvlistarproductos";
             this.dgvlistarproductos.Size = new System.Drawing.Size(666, 272);
             this.dgvlistarproductos.TabIndex = 0;
-            this.dgvlistarproductos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvlistarproductos_CellContentClick);
+            
             // 
             // listarproductos
             // 

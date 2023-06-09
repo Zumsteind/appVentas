@@ -124,7 +124,7 @@ namespace vistaE
             this.Name = "agregarproducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "agregarproducto";
-            this.Load += new System.EventHandler(this.agregarproducto_Load);
+            
             this.ResumeLayout(false);
             this.PerformLayout();
 

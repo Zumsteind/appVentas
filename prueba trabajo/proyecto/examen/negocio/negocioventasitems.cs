@@ -51,11 +51,12 @@ namespace negocio
         {
             try
             {
-                datos.setearConsulta("INSERT INTO Ventasitems (IDVentas, IDProducto, PrecioUnitario, Cantidad) VALUES (@IDVentas, @IDProducto, @PrecioUnitario, @Cantidad)");
+                datos.setearConsulta("INSERT INTO Ventasitems (IDVenta, IDProducto, PrecioUnitario, Cantidad,PrecioTotal) VALUES (@IDVentas, @IDProducto, @PrecioUnitario, @Cantidad,@preciototal)");
                 datos.SetearParametro("@IDVentas", ventaitem.idventas.id);
                 datos.SetearParametro("@IDProducto", ventaitem.idproducto.Id);
                 datos.SetearParametro("@PrecioUnitario", ventaitem.preciounitario);
                 datos.SetearParametro("@Cantidad", ventaitem.cantidad);
+                datos.SetearParametro("@preciototal", ventaitem.cantidad*ventaitem.preciounitario);
 
                 datos.ejecutarAccion();
                 return true;

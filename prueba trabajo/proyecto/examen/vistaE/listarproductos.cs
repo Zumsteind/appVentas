@@ -21,7 +21,7 @@ namespace vistaE
 
         private void listarproductos_Load(object sender, EventArgs e)
         {
-            Producto x = new Producto();
+            
             NegocioProducto negocio = new NegocioProducto();
 
             dgvlistarproductos.DataSource = negocio.ListarProductos();
@@ -30,9 +30,6 @@ namespace vistaE
 
         }
 
-        private void dgvlistarproductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
-        {
-
-        }
+       
     }
 }

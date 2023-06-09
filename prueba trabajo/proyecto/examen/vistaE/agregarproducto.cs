@@ -65,9 +65,6 @@ namespace vistaE
             }
         }
 
-        private void agregarproducto_Load(object sender, EventArgs e)
-        {
-
-        }
+       
     }
 }

@@ -10,11 +10,17 @@ using System.Windows.Forms;
 
 namespace vistaE
 {
-    public partial class agregarventa : Form
+    public partial class menu : Form
     {
-        public agregarventa()
+        public menu()
         {
             InitializeComponent();
+        }
+
+        private void btnventa_Click(object sender, EventArgs e)
+        {
+            Venta_alta ventana = new Venta_alta();
+            ventana.ShowDialog();
         }
     }
 }

@@ -1,7 +1,7 @@
 ﻿
 namespace vistaE
 {
-    partial class agregarventa
+    partial class menu
     {
         /// <summary>
         /// Required designer variable.
@@ -29,32 +29,33 @@ namespace vistaE
         /// </summary>
         private void InitializeComponent()
         {
-            this.btnagregar = new System.Windows.Forms.Button();
+            this.btnventa = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
-            // btnagregar
+            // btnventa
             // 
-            this.btnagregar.Location = new System.Drawing.Point(648, 232);
-            this.btnagregar.Name = "btnagregar";
-            this.btnagregar.Size = new System.Drawing.Size(110, 44);
-            this.btnagregar.TabIndex = 0;
-            this.btnagregar.Text = "Vender";
-            this.btnagregar.UseVisualStyleBackColor = true;
+            this.btnventa.Location = new System.Drawing.Point(404, 319);
+            this.btnventa.Name = "btnventa";
+            this.btnventa.Size = new System.Drawing.Size(104, 49);
+            this.btnventa.TabIndex = 0;
+            this.btnventa.Text = "Venta";
+            this.btnventa.UseVisualStyleBackColor = true;
+            this.btnventa.Click += new System.EventHandler(this.btnventa_Click);
             // 
-            // agregarventa
+            // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.btnagregar);
-            this.Name = "agregarventa";
-            this.Text = "agregarventa";
+            this.ClientSize = new System.Drawing.Size(913, 450);
+            this.Controls.Add(this.btnventa);
+            this.Name = "menu";
+            this.Text = "menu";
             this.ResumeLayout(false);
 
         }
 
         #endregion
 
-        private System.Windows.Forms.Button btnagregar;
+        private System.Windows.Forms.Button btnventa;
     }
 }
