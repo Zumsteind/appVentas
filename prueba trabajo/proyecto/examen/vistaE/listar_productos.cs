@@ -10,26 +10,23 @@ using System.Windows.Forms;
 using entidades;
 using negocio;
 
+
 namespace vistaE
 {
-    public partial class listarproductos : Form
+    public partial class listar_productos : Form
     {
-        public listarproductos()
+        public listar_productos()
         {
             InitializeComponent();
         }
 
-        private void listarproductos_Load(object sender, EventArgs e)
+        private void listar_productos_Load(object sender, EventArgs e)
         {
-            
             NegocioProducto negocio = new NegocioProducto();
 
-            dgvlistarproductos.DataSource = negocio.ListarProductos();
-
+            dgvproductos.DataSource = negocio.ListarProductos();
 
 
         }
-
-       
     }
 }

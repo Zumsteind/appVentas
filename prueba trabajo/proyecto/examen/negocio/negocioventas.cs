@@ -125,8 +125,7 @@ namespace negocio
             }
             catch (Exception)
             {
-                // Manejar el error adecuadamente
-                // ...
+                
             }
             finally
             {
