@@ -60,5 +60,11 @@ namespace vistaE
             modificar_eliminar_producto ventana = new modificar_eliminar_producto();
             ventana.ShowDialog();
         }
+
+        private void btnlistarventas_Click(object sender, EventArgs e)
+        {
+            listar_ventas ventana = new listar_ventas();
+            ventana.ShowDialog();
+        }
     }
 }

@@ -40,6 +40,7 @@ namespace vistaE
             this.lblcliente = new System.Windows.Forms.Label();
             this.lblproducto = new System.Windows.Forms.Label();
             this.lblventa = new System.Windows.Forms.Label();
+            this.btnlistarventas = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // btnventa
@@ -152,12 +153,23 @@ namespace vistaE
             this.lblventa.TabIndex = 10;
             this.lblventa.Text = "Ventas";
             // 
+            // btnlistarventas
+            // 
+            this.btnlistarventas.Location = new System.Drawing.Point(469, 163);
+            this.btnlistarventas.Name = "btnlistarventas";
+            this.btnlistarventas.Size = new System.Drawing.Size(140, 51);
+            this.btnlistarventas.TabIndex = 11;
+            this.btnlistarventas.Text = "Ver ventas";
+            this.btnlistarventas.UseVisualStyleBackColor = true;
+            this.btnlistarventas.Click += new System.EventHandler(this.btnlistarventas_Click);
+            // 
             // menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.ActiveCaption;
             this.ClientSize = new System.Drawing.Size(755, 498);
+            this.Controls.Add(this.btnlistarventas);
             this.Controls.Add(this.lblventa);
             this.Controls.Add(this.lblproducto);
             this.Controls.Add(this.lblcliente);
@@ -191,5 +203,6 @@ namespace vistaE
         private System.Windows.Forms.Label lblcliente;
         private System.Windows.Forms.Label lblproducto;
         private System.Windows.Forms.Label lblventa;
+        private System.Windows.Forms.Button btnlistarventas;
     }
 }

@@ -134,7 +134,38 @@ namespace negocio
             return ultimoID;
         }
 
+        public List<Ventas> ListarVentasconnombre()
+        {
+            List<Ventas> lista = new List<Ventas>();
 
+            try
+            {
+                datos.setearConsulta("SELECT v.ID, c.Cliente as cliente, fecha, total FROM ventas as v inner join clientes c on v.IDCliente=c.ID");
+                datos.lecturaDatos();
+
+                while (datos.Lector.Read())
+                {
+                    Ventas venta = new Ventas();
+                    Clientes cliente = new Clientes();
+                    venta.id = Convert.ToInt32(datos.Lector["id"]);
+                    cliente.Cliente = datos.Lector["cliente"].ToString();
+                    venta.idcliente = cliente; // Asignar la instancia de Clientes a la propiedad idcliente
+                    venta.fecha = Convert.ToDateTime(datos.Lector["fecha"]);
+                    venta.total = Convert.ToSingle(datos.Lector["total"]);
+
+                    lista.Add(venta);
+                }
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
 
     }
 }
