@@ -134,6 +134,7 @@ namespace negocio
             return ultimoID;
         }
 
+        /*
         public List<Ventas> ListarVentasconnombre()
         {
             List<Ventas> lista = new List<Ventas>();
@@ -165,7 +166,46 @@ namespace negocio
             {
                 datos.cerrarConexion();
             }
+        }*/
+
+        public List<Ventas> ListarVentasconnombre()
+        {
+            List<Ventas> lista = new List<Ventas>();
+
+            try
+            {
+                datos.setearConsulta("SELECT v.ID, c.Cliente as cliente, fecha, total FROM ventas as v inner join clientes c on v.IDCliente=c.ID");
+                datos.lecturaDatos();
+
+                while (datos.Lector.Read())
+                {
+                    Ventas venta = new Ventas();
+                    venta.id = Convert.ToInt32(datos.Lector["id"]);
+
+                    // Crear una nueva instancia de Clientes y asignar solo la propiedad Cliente
+                    venta.idcliente = new Clientes()
+                    {
+                        Cliente = datos.Lector["cliente"].ToString()
+                    };
+
+                    venta.fecha = Convert.ToDateTime(datos.Lector["fecha"]);
+                    venta.total = Convert.ToSingle(datos.Lector["total"]);
+
+                    lista.Add(venta);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
         }
+
 
     }
 }

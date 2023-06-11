@@ -15,9 +15,13 @@ namespace vistaE
 {
     public partial class listar_ventas : Form
     {
+        public static int IdVenta { get; set; } = -1;
+
         public listar_ventas()
         {
             InitializeComponent();
+           
+           
         }
 
         private void listar_ventas_Load(object sender, EventArgs e)
@@ -25,6 +29,7 @@ namespace vistaE
             NegocioVentas negocio = new NegocioVentas();
             List<Ventas> listaVentas = negocio.ListarVentasconnombre();
 
+           
             // Configurar las columnas manualmente
             dgvventas.Columns.Add("id", "ID");
             dgvventas.Columns.Add("cliente", "Cliente");
@@ -46,6 +51,7 @@ namespace vistaE
                 // Agregar la fila a la grilla
                 dgvventas.Rows.Add(fila);
             }
+            
 
 
         }
@@ -74,6 +80,27 @@ namespace vistaE
                 fila.Cells[3].Value = venta.total;
 
                 dgvventas.Rows.Add(fila);
+            }
+        }
+
+        private void btvverproductosdeventa_Click(object sender, EventArgs e)
+        {
+            ListadeProductosvendidos ventana = new ListadeProductosvendidos();
+            ventana.ShowDialog();
+        }
+
+        private void dgvventas_SelectionChanged(object sender, EventArgs e)
+        {
+            if (dgvventas.CurrentRow != null)
+            {
+                // Obtenemos el valor de la primera columna de la fila seleccionada
+                int idVentaSeleccionada = (int)dgvventas.CurrentRow.Cells[0].Value;
+
+                // Asignar el valor a la propiedad estática IdVenta
+                IdVenta = idVentaSeleccionada;
+
+                // Mostrar el valor en el control Label
+                lblidventa.Text = idVentaSeleccionada.ToString();
             }
         }
     }

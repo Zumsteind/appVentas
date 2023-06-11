@@ -15,7 +15,7 @@ namespace vistas
         {
 
         }
-
+        /*
         protected void btnagregar_Click(object sender, EventArgs e)
         {
 
@@ -45,6 +45,6 @@ namespace vistas
 
             }
 
-        }
+        }*/
     }
 }

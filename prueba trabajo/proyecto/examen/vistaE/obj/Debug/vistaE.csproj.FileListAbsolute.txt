@@ -68,3 +68,8 @@ C:\Users\test\Desktop\appParaVentas\appVentas\prueba trabajo\proyecto\examen\vis
 C:\Users\test\Desktop\appParaVentas\appVentas\prueba trabajo\proyecto\examen\vistaE\obj\Debug\vistaE.agregarproductosaventa.resources
 C:\Users\test\Desktop\appParaVentas\appVentas\prueba trabajo\proyecto\examen\vistaE\obj\Debug\vistaE.listar_productos.resources
 C:\Users\test\Desktop\appParaVentas\appVentas\prueba trabajo\proyecto\examen\vistaE\obj\Debug\vistaE.listar_ventas.resources
+C:\Users\test\Desktop\appParaVentas\appVentas\prueba trabajo\proyecto\examen\vistaE\bin\Debug\vistaE.exe.manifest
+C:\Users\test\Desktop\appParaVentas\appVentas\prueba trabajo\proyecto\examen\vistaE\bin\Debug\vistaE.application
+C:\Users\test\Desktop\appParaVentas\appVentas\prueba trabajo\proyecto\examen\vistaE\obj\Debug\vistaE.exe.manifest
+C:\Users\test\Desktop\appParaVentas\appVentas\prueba trabajo\proyecto\examen\vistaE\obj\Debug\vistaE.application
+C:\Users\test\Desktop\appParaVentas\appVentas\prueba trabajo\proyecto\examen\vistaE\obj\Debug\vistaE.ListadeProductosvendidos.resources

@@ -18,7 +18,7 @@ namespace negocio
 
             try
             {
-                datos.setearConsulta("SELECT ID, IDVentas, IDProducto, PrecioUnitario, Cantidad FROM Ventasitems");
+                datos.setearConsulta("SELECT ID,IDVenta, IDProducto, PrecioUnitario, Cantidad FROM Ventasitems");
 
                 datos.lecturaDatos();
 
@@ -112,6 +112,47 @@ namespace negocio
                 datos.cerrarConexion();
             }
         }
+
+
+        public List<string> listarproductos(int idrecibido)
+        {
+            List<string> lista = new List<string>();
+
+            try
+            {
+                datos.setearConsulta("SELECT vi.ID as 'id_item', pr.Nombre as 'nombre_producto', vi.Cantidad as 'cantidad', vi.PrecioUnitario as 'precio_unitario', vi.Cantidad * vi.PrecioUnitario as 'total' " +
+                                     "FROM ventasitems vi " +
+                                     "INNER JOIN ventas v ON v.ID = vi.IDVenta " +
+                                     "INNER JOIN productos pr ON vi.IDProducto = pr.ID " +
+                                     "WHERE vi.IDVenta = @idrecibido");
+                datos.SetearParametro("@idrecibido", idrecibido);
+
+                datos.lecturaDatos();
+
+                while (datos.Lector.Read())
+                {
+                    string item = "";
+                    item += "id_item: " + datos.Lector["id_item"].ToString() + ", ";
+                    item += "nombre_producto: " + datos.Lector["nombre_producto"].ToString() + ", ";
+                    item += "cantidad: " + datos.Lector["cantidad"].ToString() + ", ";
+                    item += "precio_unitario: " + datos.Lector["precio_unitario"].ToString() + ", ";
+                    item += "total: " + (float.Parse(datos.Lector["cantidad"].ToString()) * float.Parse(datos.Lector["precio_unitario"].ToString())).ToString();
+
+                    lista.Add(item);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
 
 
     }

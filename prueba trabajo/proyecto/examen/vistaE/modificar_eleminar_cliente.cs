@@ -43,6 +43,7 @@ namespace vistaE
 
         private void dgvlistaclientes_SelectionChanged(object sender, EventArgs e)
         {
+            //Obtenemos el id seleccionado de la lista. 
             Clientes clienteseleccionado = (Clientes)dgvlistaclientes.CurrentRow.DataBoundItem;
             id = (int)clienteseleccionado.Id;
             txtnombre.Text = clienteseleccionado.Cliente;
@@ -143,5 +144,7 @@ namespace vistaE
             NegocioCliente negocio = new NegocioCliente();
             dgvlistaclientes.DataSource = negocio.buscarClientes(txtbcliente.Text);
         }
+
+       
     }
 }

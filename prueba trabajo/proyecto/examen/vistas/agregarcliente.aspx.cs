@@ -21,14 +21,14 @@ namespace vistas
 
 
         }
-
+        /*
         protected void btnagregar_Click(object sender, EventArgs e)
         {
             Clientes x = new Clientes();
             NegocioCliente negocio = new NegocioCliente();
 
 
-            x.setcliente(txtcliente.Text);
+            x.Cliente(txtcliente.Text);
             x.settelefono(txttelefono.Text);
             x.setcorreo(txtcorreo.Text);
 
@@ -49,8 +49,7 @@ namespace vistas
                 string script = "alert('Error al agregar el cliente.');";
                 ClientScript.RegisterStartupScript(this.GetType(), "alert", script, true);
             }
-            
+            */
 
         }
     }
-}
