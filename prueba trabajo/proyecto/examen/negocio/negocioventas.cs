@@ -52,7 +52,7 @@ namespace negocio
                 datos.setearConsulta("INSERT INTO ventas (idcliente, fecha, total) VALUES (@idcliente, @fecha, @total)");
                 datos.SetearParametro("@idcliente", venta.idcliente.Id);
                 datos.SetearParametro("@fecha", venta.fecha);
-                datos.SetearParametro("@total", venta.total);
+                datos.SetearParametro("@total", 0);
 
                 datos.ejecutarAccion();
                 return true;
@@ -185,7 +185,9 @@ namespace negocio
                     // Crear una nueva instancia de Clientes y asignar solo la propiedad Cliente
                     venta.idcliente = new Clientes()
                     {
-                        Cliente = datos.Lector["cliente"].ToString()
+                        Cliente = datos.Lector["cliente"].ToString(),
+                        Telefono= datos.Lector["cliente"].ToString()
+
                     };
 
                     venta.fecha = Convert.ToDateTime(datos.Lector["fecha"]);

@@ -36,19 +36,20 @@ namespace vistaE
             // 
             // dgvproductos
             // 
+            this.dgvproductos.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvproductos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvproductos.Location = new System.Drawing.Point(146, 109);
+            this.dgvproductos.Location = new System.Drawing.Point(225, 175);
             this.dgvproductos.Name = "dgvproductos";
-            this.dgvproductos.Size = new System.Drawing.Size(520, 202);
+            this.dgvproductos.Size = new System.Drawing.Size(452, 338);
             this.dgvproductos.TabIndex = 0;
             // 
             // lbltitulo
             // 
             this.lbltitulo.AutoSize = true;
-            this.lbltitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lbltitulo.Location = new System.Drawing.Point(142, 21);
+            this.lbltitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitulo.Location = new System.Drawing.Point(152, 69);
             this.lbltitulo.Name = "lbltitulo";
-            this.lbltitulo.Size = new System.Drawing.Size(181, 24);
+            this.lbltitulo.Size = new System.Drawing.Size(298, 37);
             this.lbltitulo.TabIndex = 1;
             this.lbltitulo.Text = "Lista de productos";
             // 
@@ -56,9 +57,11 @@ namespace vistaE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(934, 661);
             this.Controls.Add(this.lbltitulo);
             this.Controls.Add(this.dgvproductos);
+            this.MaximumSize = new System.Drawing.Size(950, 700);
+            this.MinimumSize = new System.Drawing.Size(950, 700);
             this.Name = "listar_productos";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "listar_productos";

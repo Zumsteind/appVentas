@@ -35,13 +35,14 @@ namespace vistaE
             this.btvverproductosdeventa = new System.Windows.Forms.Button();
             this.lblidseleccionado = new System.Windows.Forms.Label();
             this.lblidventa = new System.Windows.Forms.Label();
+            this.lbltitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvventas)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvventas
             // 
             this.dgvventas.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvventas.Location = new System.Drawing.Point(143, 111);
+            this.dgvventas.Location = new System.Drawing.Point(220, 270);
             this.dgvventas.Name = "dgvventas";
             this.dgvventas.Size = new System.Drawing.Size(560, 175);
             this.dgvventas.TabIndex = 0;
@@ -49,7 +50,7 @@ namespace vistaE
             // 
             // dtpfechaventa
             // 
-            this.dtpfechaventa.Location = new System.Drawing.Point(143, 66);
+            this.dtpfechaventa.Location = new System.Drawing.Point(220, 204);
             this.dtpfechaventa.Name = "dtpfechaventa";
             this.dtpfechaventa.Size = new System.Drawing.Size(222, 20);
             this.dtpfechaventa.TabIndex = 1;
@@ -58,17 +59,18 @@ namespace vistaE
             // lblfecha
             // 
             this.lblfecha.AutoSize = true;
-            this.lblfecha.Location = new System.Drawing.Point(140, 37);
+            this.lblfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblfecha.Location = new System.Drawing.Point(216, 159);
             this.lblfecha.Name = "lblfecha";
-            this.lblfecha.Size = new System.Drawing.Size(160, 13);
+            this.lblfecha.Size = new System.Drawing.Size(264, 20);
             this.lblfecha.TabIndex = 2;
             this.lblfecha.Text = "Seleccione la fecha de la venta:";
             // 
             // btvverproductosdeventa
             // 
-            this.btvverproductosdeventa.Location = new System.Drawing.Point(508, 307);
+            this.btvverproductosdeventa.Location = new System.Drawing.Point(589, 513);
             this.btvverproductosdeventa.Name = "btvverproductosdeventa";
-            this.btvverproductosdeventa.Size = new System.Drawing.Size(182, 26);
+            this.btvverproductosdeventa.Size = new System.Drawing.Size(191, 56);
             this.btvverproductosdeventa.TabIndex = 3;
             this.btvverproductosdeventa.Text = "Ver productos de venta";
             this.btvverproductosdeventa.UseVisualStyleBackColor = true;
@@ -77,7 +79,7 @@ namespace vistaE
             // lblidseleccionado
             // 
             this.lblidseleccionado.AutoSize = true;
-            this.lblidseleccionado.Location = new System.Drawing.Point(140, 320);
+            this.lblidseleccionado.Location = new System.Drawing.Point(217, 535);
             this.lblidseleccionado.Name = "lblidseleccionado";
             this.lblidseleccionado.Size = new System.Drawing.Size(63, 13);
             this.lblidseleccionado.TabIndex = 4;
@@ -86,23 +88,37 @@ namespace vistaE
             // lblidventa
             // 
             this.lblidventa.AutoSize = true;
-            this.lblidventa.Location = new System.Drawing.Point(209, 320);
+            this.lblidventa.Location = new System.Drawing.Point(286, 535);
             this.lblidventa.Name = "lblidventa";
             this.lblidventa.Size = new System.Drawing.Size(0, 13);
             this.lblidventa.TabIndex = 5;
+            // 
+            // lbltitulo
+            // 
+            this.lbltitulo.AutoSize = true;
+            this.lbltitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitulo.Location = new System.Drawing.Point(333, 49);
+            this.lbltitulo.Name = "lbltitulo";
+            this.lbltitulo.Size = new System.Drawing.Size(253, 37);
+            this.lbltitulo.TabIndex = 6;
+            this.lbltitulo.Text = "Lista de Ventas";
             // 
             // listar_ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(934, 661);
+            this.Controls.Add(this.lbltitulo);
             this.Controls.Add(this.lblidventa);
             this.Controls.Add(this.lblidseleccionado);
             this.Controls.Add(this.btvverproductosdeventa);
             this.Controls.Add(this.lblfecha);
             this.Controls.Add(this.dtpfechaventa);
             this.Controls.Add(this.dgvventas);
+            this.MaximumSize = new System.Drawing.Size(950, 700);
+            this.MinimumSize = new System.Drawing.Size(950, 700);
             this.Name = "listar_ventas";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "listar_ventas";
             this.Load += new System.EventHandler(this.listar_ventas_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvventas)).EndInit();
@@ -119,5 +135,6 @@ namespace vistaE
         private System.Windows.Forms.Button btvverproductosdeventa;
         private System.Windows.Forms.Label lblidseleccionado;
         private System.Windows.Forms.Label lblidventa;
+        private System.Windows.Forms.Label lbltitulo;
     }
 }

@@ -17,6 +17,7 @@ namespace vistaE
     {
 
         public Producto nuevoproducto { get; set; }
+        public  float totalventaproductos { get; set; } = 0;
 
 
         public agregarproductosaventa()
@@ -36,13 +37,15 @@ namespace vistaE
 
                 throw;
             }
-           
 
+            
             
         }
         private void btnagregar_Click(object sender, EventArgs e)
         {
             int idVentaGenerada = Venta_alta.IdVentaGenerada;
+            
+
             Ventas venta = new Ventas();
             Producto producto = new Producto();
             venta.id = idVentaGenerada;
@@ -51,17 +54,35 @@ namespace vistaE
             x.idventas = venta;
             x.idproducto = producto;
             x.cantidad = float.Parse(txtcantidad.Text);
-            x.preciounitario =float.Parse(lblprecio.Text);
+            x.preciounitario = float.Parse(lblprecio.Text);
             negocioventasitems negocio = new negocioventasitems();
+            txtcantidad.Text = "1";
+           
 
-            if (negocio.agregarVentaitem(x))
+            try
             {
-                MessageBox.Show("Se agregó el producto a la venta. ¿Desea agregar más?");
+                // Agregar el producto a la venta
+                bool exitoAgregar = negocio.agregarVentaitem(x);
+
+                if (exitoAgregar)
+                {
+                    
+                        MessageBox.Show("Se agregó el producto a la venta");
+                    totalventaproductos += x.cantidad * x.preciounitario;
+                    lbltotaldeventa.Text = totalventaproductos.ToString()+" $";
+                }
+                else
+                {
+                    MessageBox.Show("No se pudo agregar el producto a la venta.");
+                    
+                }
             }
-            else
+            catch (Exception ex)
             {
-                MessageBox.Show("No se pudo agregar el producto a la venta.");
+                MessageBox.Show("Ocurrió un error: " + ex.Message);
             }
+            
+
         }
 
         private void dgvproductos_CellContentClick(object sender, DataGridViewCellEventArgs e)
@@ -86,6 +107,28 @@ namespace vistaE
                 // Cancelar el evento para evitar que se muestre el carácter en el TextBox
                 e.Handled = true;
             }
+        }
+
+        private void agregarproductosaventa_FormClosed(object sender, FormClosedEventArgs e)
+        {
+           
+
+        }
+
+        private void btnfinalizarventa_Click(object sender, EventArgs e)
+        {
+            int idVentaGenerada = Venta_alta.IdVentaGenerada;
+            negocioventasitems negocio = new negocioventasitems();
+            if (negocio.actualizartotalventa(idVentaGenerada, totalventaproductos))
+            {
+                MessageBox.Show("se actualizo el total de la venta");
+            }
+            else { MessageBox.Show("no se pudo actualizar el total de la venta"); }
+
+            this.Close();
+
+           
+
         }
     }
 }

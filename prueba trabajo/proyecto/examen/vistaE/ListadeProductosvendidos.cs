@@ -21,10 +21,15 @@ namespace vistaE
 
         private void ListadeProductosvendidos_Load(object sender, EventArgs e)
         {
+
             int idVentaGenerada = listar_ventas.IdVenta;
             lblid.Text = idVentaGenerada.ToString();
-
             negocioventasitems negocio = new negocioventasitems();
+           
+           
+            
+
+           
 
             List<string> listaProductos = negocio.listarproductos(idVentaGenerada);
 
@@ -58,6 +63,11 @@ namespace vistaE
             {
                 columna.DefaultCellStyle.Alignment = DataGridViewContentAlignment.MiddleCenter;
             }
+            
+        }
+
+        private void dgvproductosvendidos_CellContentClick(object sender, DataGridViewCellEventArgs e)
+        {
 
         }
     }

@@ -40,8 +40,9 @@ namespace vistaE
             this.dgvproductosvendidos.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             this.dgvproductosvendidos.Location = new System.Drawing.Point(131, 147);
             this.dgvproductosvendidos.Name = "dgvproductosvendidos";
-            this.dgvproductosvendidos.Size = new System.Drawing.Size(590, 194);
+            this.dgvproductosvendidos.Size = new System.Drawing.Size(576, 273);
             this.dgvproductosvendidos.TabIndex = 0;
+            this.dgvproductosvendidos.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dgvproductosvendidos_CellContentClick);
             // 
             // lblidventa
             // 
@@ -65,11 +66,14 @@ namespace vistaE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(934, 661);
             this.Controls.Add(this.lblid);
             this.Controls.Add(this.lblidventa);
             this.Controls.Add(this.dgvproductosvendidos);
+            this.MaximumSize = new System.Drawing.Size(950, 700);
+            this.MinimumSize = new System.Drawing.Size(950, 700);
             this.Name = "ListadeProductosvendidos";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ListadeProductosvendidos";
             this.Load += new System.EventHandler(this.ListadeProductosvendidos_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvproductosvendidos)).EndInit();

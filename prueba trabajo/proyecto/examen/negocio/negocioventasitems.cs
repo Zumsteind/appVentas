@@ -94,6 +94,31 @@ namespace negocio
             }
         }
 
+        public bool actualizartotalventa(int id, float total)
+        {
+            try
+            {
+               
+                datos.setearConsulta("UPDATE ventas SET Total = @total WHERE ID = @IDVentas");
+                datos.SetearParametro("@IDVentas", id);
+                datos.SetearParametro("@total", total);
+               
+                
+
+                datos.ejecutarAccion();
+                return true;
+            }
+            catch (Exception ex)
+            {
+                return false;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+
         public void eliminarVentaitem(int idVentaitem)
         {
             try
@@ -139,6 +164,52 @@ namespace negocio
                     item += "total: " + (float.Parse(datos.Lector["cantidad"].ToString()) * float.Parse(datos.Lector["precio_unitario"].ToString())).ToString();
 
                     lista.Add(item);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+        public List<Ventasitems> listarproductosprueba(int idrecibido)
+        {
+            List<Ventasitems> lista = new List<Ventasitems>();
+
+            try
+            {
+                datos.setearConsulta("SELECT vi.ID as 'id_item', pr.Nombre as 'nombre_producto', vi.Cantidad as 'cantidad', vi.PrecioUnitario as 'precio_unitario', vi.Cantidad * vi.PrecioUnitario as 'total' " +
+                                     "FROM ventasitems vi " +
+                                     "INNER JOIN ventas v ON v.ID = vi.IDVenta " +
+                                     "INNER JOIN productos pr ON vi.IDProducto = pr.ID " +
+                                     "WHERE vi.IDVenta = @idrecibido");
+                datos.SetearParametro("@idrecibido", idrecibido);
+
+                datos.lecturaDatos();
+
+                while (datos.Lector.Read())
+                {
+                    Ventas venta = new Ventas();
+                    Clientes cliente = new Clientes();
+                    Ventasitems ventaitems = new Ventasitems();
+                    Producto producto = new Producto();
+
+                    ventaitems.id=(int) datos.Lector["id_item"];
+                    
+                    producto.Nombre= datos.Lector["nombre_producto"].ToString();
+                    ventaitems.idproducto = producto;
+
+                    ventaitems.cantidad = float.Parse(datos.Lector["cantidad"].ToString());
+
+                    lista.Add(ventaitems);
+
+
                 }
 
                 return lista;

@@ -42,67 +42,70 @@ namespace vistaE
             // lblagregarproducto
             // 
             this.lblagregarproducto.AutoSize = true;
-            this.lblagregarproducto.Font = new System.Drawing.Font("Arial", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblagregarproducto.Location = new System.Drawing.Point(276, 76);
+            this.lblagregarproducto.Font = new System.Drawing.Font("Arial", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblagregarproducto.Location = new System.Drawing.Point(281, 76);
             this.lblagregarproducto.Name = "lblagregarproducto";
-            this.lblagregarproducto.Size = new System.Drawing.Size(175, 22);
+            this.lblagregarproducto.Size = new System.Drawing.Size(286, 37);
             this.lblagregarproducto.TabIndex = 0;
             this.lblagregarproducto.Text = "Agregar producto";
             // 
             // lblnombre
             // 
             this.lblnombre.AutoSize = true;
-            this.lblnombre.Location = new System.Drawing.Point(323, 133);
+            this.lblnombre.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblnombre.Location = new System.Drawing.Point(296, 201);
             this.lblnombre.Name = "lblnombre";
-            this.lblnombre.Size = new System.Drawing.Size(47, 13);
+            this.lblnombre.Size = new System.Drawing.Size(84, 24);
             this.lblnombre.TabIndex = 1;
             this.lblnombre.Text = "Nombre:";
             // 
             // lblprecio
             // 
             this.lblprecio.AutoSize = true;
-            this.lblprecio.Location = new System.Drawing.Point(323, 169);
+            this.lblprecio.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblprecio.Location = new System.Drawing.Point(311, 244);
             this.lblprecio.Name = "lblprecio";
-            this.lblprecio.Size = new System.Drawing.Size(40, 13);
+            this.lblprecio.Size = new System.Drawing.Size(69, 24);
             this.lblprecio.TabIndex = 2;
             this.lblprecio.Text = "Precio:";
             // 
             // lblcategoria
             // 
             this.lblcategoria.AutoSize = true;
-            this.lblcategoria.Location = new System.Drawing.Point(323, 207);
+            this.lblcategoria.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblcategoria.Location = new System.Drawing.Point(284, 283);
             this.lblcategoria.Name = "lblcategoria";
-            this.lblcategoria.Size = new System.Drawing.Size(55, 13);
+            this.lblcategoria.Size = new System.Drawing.Size(95, 24);
             this.lblcategoria.TabIndex = 3;
             this.lblcategoria.Text = "Categoria:";
             // 
             // txtnombre
             // 
-            this.txtnombre.Location = new System.Drawing.Point(413, 126);
+            this.txtnombre.Location = new System.Drawing.Point(415, 201);
             this.txtnombre.Name = "txtnombre";
-            this.txtnombre.Size = new System.Drawing.Size(100, 20);
+            this.txtnombre.Size = new System.Drawing.Size(152, 20);
             this.txtnombre.TabIndex = 4;
             // 
             // txtprecio
             // 
-            this.txtprecio.Location = new System.Drawing.Point(413, 162);
+            this.txtprecio.Location = new System.Drawing.Point(415, 244);
             this.txtprecio.Name = "txtprecio";
-            this.txtprecio.Size = new System.Drawing.Size(100, 20);
+            this.txtprecio.Size = new System.Drawing.Size(152, 20);
             this.txtprecio.TabIndex = 5;
             this.txtprecio.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.txtprecio_KeyPress);
             // 
             // txtcategoria
             // 
-            this.txtcategoria.Location = new System.Drawing.Point(413, 207);
+            this.txtcategoria.Location = new System.Drawing.Point(415, 287);
             this.txtcategoria.Name = "txtcategoria";
-            this.txtcategoria.Size = new System.Drawing.Size(100, 20);
+            this.txtcategoria.Size = new System.Drawing.Size(152, 20);
             this.txtcategoria.TabIndex = 6;
             // 
             // btbagregar
             // 
-            this.btbagregar.Location = new System.Drawing.Point(413, 249);
+            this.btbagregar.Location = new System.Drawing.Point(415, 368);
             this.btbagregar.Name = "btbagregar";
-            this.btbagregar.Size = new System.Drawing.Size(75, 23);
+            this.btbagregar.Size = new System.Drawing.Size(145, 75);
             this.btbagregar.TabIndex = 7;
             this.btbagregar.Text = "Agregar";
             this.btbagregar.UseVisualStyleBackColor = true;
@@ -112,7 +115,7 @@ namespace vistaE
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(934, 661);
             this.Controls.Add(this.btbagregar);
             this.Controls.Add(this.txtcategoria);
             this.Controls.Add(this.txtprecio);
@@ -121,10 +124,11 @@ namespace vistaE
             this.Controls.Add(this.lblprecio);
             this.Controls.Add(this.lblnombre);
             this.Controls.Add(this.lblagregarproducto);
+            this.MaximumSize = new System.Drawing.Size(950, 700);
+            this.MinimumSize = new System.Drawing.Size(950, 700);
             this.Name = "agregarproducto";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "agregarproducto";
-            
             this.ResumeLayout(false);
             this.PerformLayout();
 

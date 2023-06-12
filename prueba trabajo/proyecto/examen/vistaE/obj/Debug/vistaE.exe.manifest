@@ -61,31 +61,31 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>H/OjTnj7/Y5Z0tA/OmiD5EOXbfHv1KTbQLWNS8bFibw=</dsig:DigestValue>
+        <dsig:DigestValue>3A9oJiTSwjjf6muwqaknc3HLArMUNP4GKI0qSSXmG6k=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="negocio.dll" size="16384">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="negocio.dll" size="17408">
       <assemblyIdentity name="negocio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>RD/l+TIss9WbhYNGJ3WZ+FffyOmEhdndQqAwkqOJeZE=</dsig:DigestValue>
+        <dsig:DigestValue>BUXVft4SOU/bJA/sBfbL45KnsPgQ1cJBPUmf2MYcvPU=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="vistaE.exe" size="45496">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="vistaE.exe" size="49592">
       <assemblyIdentity name="vistaE" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>TmJaBdd5z+UJ2mB+XbZzH1dSyCkb9IE/AbqAIJdm6rw=</dsig:DigestValue>
+        <dsig:DigestValue>gbSJBP+SESb25sSePlKfqGyMRyZNtBWOp/0cBJrTiQQ=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>

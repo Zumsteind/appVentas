@@ -32,13 +32,15 @@ namespace vistaE
             this.dgvlistarcliente = new System.Windows.Forms.DataGridView();
             this.txtbuscarcliente = new System.Windows.Forms.TextBox();
             this.lblBcliente = new System.Windows.Forms.Label();
+            this.label1 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvlistarcliente)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvlistarcliente
             // 
+            this.dgvlistarcliente.BackgroundColor = System.Drawing.SystemColors.Control;
             this.dgvlistarcliente.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dgvlistarcliente.Location = new System.Drawing.Point(110, 80);
+            this.dgvlistarcliente.Location = new System.Drawing.Point(277, 203);
             this.dgvlistarcliente.Name = "dgvlistarcliente";
             this.dgvlistarcliente.Size = new System.Drawing.Size(557, 306);
             this.dgvlistarcliente.TabIndex = 0;
@@ -46,7 +48,7 @@ namespace vistaE
             // 
             // txtbuscarcliente
             // 
-            this.txtbuscarcliente.Location = new System.Drawing.Point(235, 33);
+            this.txtbuscarcliente.Location = new System.Drawing.Point(279, 145);
             this.txtbuscarcliente.Name = "txtbuscarcliente";
             this.txtbuscarcliente.Size = new System.Drawing.Size(328, 20);
             this.txtbuscarcliente.TabIndex = 1;
@@ -56,20 +58,34 @@ namespace vistaE
             // lblBcliente
             // 
             this.lblBcliente.AutoSize = true;
-            this.lblBcliente.Location = new System.Drawing.Point(151, 40);
+            this.lblBcliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblBcliente.Location = new System.Drawing.Point(112, 145);
             this.lblBcliente.Name = "lblBcliente";
-            this.lblBcliente.Size = new System.Drawing.Size(74, 13);
+            this.lblBcliente.Size = new System.Drawing.Size(142, 24);
             this.lblBcliente.TabIndex = 2;
             this.lblBcliente.Text = "Buscar cliente";
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label1.Location = new System.Drawing.Point(345, 25);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(262, 37);
+            this.label1.TabIndex = 3;
+            this.label1.Text = "Lista de clientes";
             // 
             // listarclientes
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(934, 661);
+            this.Controls.Add(this.label1);
             this.Controls.Add(this.lblBcliente);
             this.Controls.Add(this.txtbuscarcliente);
             this.Controls.Add(this.dgvlistarcliente);
+            this.MaximumSize = new System.Drawing.Size(950, 700);
+            this.MinimumSize = new System.Drawing.Size(950, 700);
             this.Name = "listarclientes";
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "listarclientes";
@@ -85,5 +101,6 @@ namespace vistaE
         private System.Windows.Forms.DataGridView dgvlistarcliente;
         private System.Windows.Forms.TextBox txtbuscarcliente;
         private System.Windows.Forms.Label lblBcliente;
+        private System.Windows.Forms.Label label1;
     }
 }

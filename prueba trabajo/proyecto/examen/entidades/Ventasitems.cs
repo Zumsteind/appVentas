@@ -30,5 +30,8 @@ namespace entidades
             this.preciounitario = preciounitario;
             this.cantidad = cantidad;
         }
+
+
+
     }
 }
