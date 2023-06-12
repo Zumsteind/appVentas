@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>99vGpm76tMuGcp/Pu557I6FOcMlpCgHHU/g8tiuEcTE=</dsig:DigestValue>
+        <dsig:DigestValue>k2o9/yr343MvB09pOM0N6I8BJv3XS6g0SZVjCxS7tu8=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -89,13 +89,13 @@
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="vistaE.exe.config" size="187">
+  <file name="vistaE.exe.config" size="362">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>+CM46OnHRrXZXNLMx7+U3V3iubiYL//d8hGOR13lDhU=</dsig:DigestValue>
+      <dsig:DigestValue>+FjHmDI5M9Rvvy3u4r0yQ7jmt7bJoScfoHZVpvNQVZs=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

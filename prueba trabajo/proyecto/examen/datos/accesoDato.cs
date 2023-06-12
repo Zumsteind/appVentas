@@ -5,6 +5,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using System.Data;
+using System.Configuration;
 
 namespace datos
 {
@@ -19,8 +20,11 @@ namespace datos
 
         public accesoDato()
         {
-            
-            conexion = new SqlConnection("server =ZUMSTEIND; database = pruebademo; integrated security = true");
+
+            // conexion = new SqlConnection("server =ZUMSTEIND; database = pruebademo; integrated security = true");
+            //de esta forma le ponemos el string de la base de datos para que haga la instancia desde app.config 
+            string connectionString = ConfigurationManager.ConnectionStrings["MiConexion"].ConnectionString;
+            conexion = new SqlConnection(connectionString);
 
             comando = new SqlCommand();
 
