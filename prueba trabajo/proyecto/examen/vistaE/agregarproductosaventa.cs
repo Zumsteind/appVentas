@@ -18,6 +18,8 @@ namespace vistaE
 
         public Producto nuevoproducto { get; set; }
         public  float totalventaproductos { get; set; } = 0;
+        public int iditem { get; set; }
+        private bool cerrarVentana = false;
 
 
         public agregarproductosaventa()
@@ -28,9 +30,12 @@ namespace vistaE
         private void agregarproductosaventa_Load(object sender, EventArgs e)
         {
             NegocioProducto negocio = new NegocioProducto();
+            
+
             try
             {
                 dgvproductos.DataSource = negocio.ListarProductos();
+                
             }
             catch (Exception)
             {
@@ -70,6 +75,11 @@ namespace vistaE
                         MessageBox.Show("Se agregó el producto a la venta");
                     totalventaproductos += x.cantidad * x.preciounitario;
                     lbltotaldeventa.Text = totalventaproductos.ToString()+" $";
+
+
+                    //agregamos los productos que se van agregando al dgv
+                    NegocioProducto negocioproductos = new NegocioProducto();
+                    dgvproductosconfirmados.DataSource= negocioproductos.ListarProductosdelaventa(idVentaGenerada);
                 }
                 else
                 {
@@ -101,17 +111,12 @@ namespace vistaE
 
         private void txtcantidad_KeyPress(object sender, KeyPressEventArgs e)
         {
-            // Verificar si el carácter ingresado no es un dígito numérico
-            if (!char.IsDigit(e.KeyChar))
-            {
-                // Cancelar el evento para evitar que se muestre el carácter en el TextBox
-                e.Handled = true;
-            }
+           
         }
 
         private void agregarproductosaventa_FormClosed(object sender, FormClosedEventArgs e)
         {
-           
+          
 
         }
 
@@ -119,16 +124,57 @@ namespace vistaE
         {
             int idVentaGenerada = Venta_alta.IdVentaGenerada;
             negocioventasitems negocio = new negocioventasitems();
-            if (negocio.actualizartotalventa(idVentaGenerada, totalventaproductos))
-            {
-                MessageBox.Show("se actualizo el total de la venta");
-            }
-            else { MessageBox.Show("no se pudo actualizar el total de la venta"); }
 
-            this.Close();
+            if (lbltotaldeventa.Text != "0 $")
+            {
+                if (negocio.actualizartotalventa(idVentaGenerada, totalventaproductos))
+                {
+                    MessageBox.Show("se actualizo el total de la venta");
+                }
+                else { MessageBox.Show("no se pudo actualizar el total de la venta"); }
+
+                cerrarVentana = true;
+                this.Close();
+
+            }
+            else { MessageBox.Show("No agrego productos a la venta"); }
+           
 
            
 
+           
+
+        }
+
+        private void btncancelarventa_Click(object sender, EventArgs e)
+        {
+            int idVentaGenerada = Venta_alta.IdVentaGenerada;
+
+            NegocioVentas negocioventas = new NegocioVentas();
+            negocioventasitems negocioitem = new negocioventasitems();
+
+            negocioitem.eliminarVentaitem(idVentaGenerada);
+            negocioventas.EliminarVenta(idVentaGenerada);
+
+            cerrarVentana = true;
+            this.Close();
+
+        }
+
+        private void txtbuscar_TextChanged(object sender, EventArgs e)
+        {
+            NegocioProducto negocioproducto = new NegocioProducto();
+            
+            dgvproductos.DataSource= negocioproducto.buscarProductos(txtbuscar.Text);
+        }
+
+        private void agregarproductosaventa_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            if (!cerrarVentana && e.CloseReason == CloseReason.UserClosing)
+            {
+                // Cancelar el cierre de la ventana
+                e.Cancel = true;
+            }
         }
     }
 }

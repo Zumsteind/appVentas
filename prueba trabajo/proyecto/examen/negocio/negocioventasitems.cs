@@ -123,7 +123,7 @@ namespace negocio
         {
             try
             {
-                datos.setearConsulta("DELETE FROM Ventasitems WHERE ID = @ID");
+                datos.setearConsulta("DELETE FROM Ventasitems WHERE IDVenta = @id");
                 datos.SetearParametro("@ID", idVentaitem);
 
                 datos.ejecutarAccion();

@@ -44,6 +44,40 @@ namespace negocio
             }
         }
 
+        public List<Producto> ListarProductosdelaventa(int id)
+        {
+            List<Producto> lista = new List<Producto>();
+
+            try
+            {
+                datos.setearConsulta("SELECT pr.ID, ISNULL(pr.Nombre, '') as Nombre, ISNULL(pr.Precio, 0.0) as Precio, ISNULL(pr.Categoria, '') as Categoria FROM productos pr INNER JOIN ventasitems vi ON pr.ID = vi.IDProducto WHERE vi.IDVenta = @id");
+                datos.SetearParametro("@id", id);
+                datos.lecturaDatos();
+
+                while (datos.Lector.Read())
+                {
+                    Producto producto = new Producto();
+                    producto.Id = Convert.ToInt32(datos.Lector["ID"]);
+                    producto.Nombre = datos.Lector["Nombre"].ToString();
+                    producto.Precio = Convert.ToSingle(datos.Lector["Precio"]);
+                    producto.Categoria = datos.Lector["Categoria"].ToString();
+
+                    lista.Add(producto);
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+            finally
+            {
+                datos.cerrarConexion();
+            }
+        }
+
+
         public bool AgregarProducto(Producto producto)
         {
             try
@@ -115,9 +149,11 @@ namespace negocio
 
             try
             {
-                string consulta = "SELECT ID, ISNULL(Nombre, '') as Nombre, ISNULL(Precio, 0.0) as Precio, ISNULL(Categoria, '') as Categoria FROM productos WHERE Nombre LIKE '%' + @FiltroNombre + '%'";
+                string consulta = "SELECT ID, ISNULL(Nombre, '') as Nombre, ISNULL(Precio, 0.0) as Precio, ISNULL(Categoria, '') as Categoria " +
+                                  "FROM productos " +
+                                  "WHERE Nombre LIKE '%' + @FiltroNombre + '%' OR Categoria LIKE '%' + @FiltroNombre + '%'";
                 datos.setearConsulta(consulta);
-                datos.SetearParametro("@FiltroNombre", filtroNombre);
+                datos.SetearParametro("@FiltroNombre", "%" + filtroNombre + "%");
 
                 datos.lecturaDatos();
 

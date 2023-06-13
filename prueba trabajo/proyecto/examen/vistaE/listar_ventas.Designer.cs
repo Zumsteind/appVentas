@@ -36,6 +36,8 @@ namespace vistaE
             this.lblidseleccionado = new System.Windows.Forms.Label();
             this.lblidventa = new System.Windows.Forms.Label();
             this.lbltitulo = new System.Windows.Forms.Label();
+            this.txtbuscarcliente = new System.Windows.Forms.TextBox();
+            this.lblbuscarcliente = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvventas)).BeginInit();
             this.SuspendLayout();
             // 
@@ -50,7 +52,7 @@ namespace vistaE
             // 
             // dtpfechaventa
             // 
-            this.dtpfechaventa.Location = new System.Drawing.Point(220, 204);
+            this.dtpfechaventa.Location = new System.Drawing.Point(522, 212);
             this.dtpfechaventa.Name = "dtpfechaventa";
             this.dtpfechaventa.Size = new System.Drawing.Size(222, 20);
             this.dtpfechaventa.TabIndex = 1;
@@ -60,7 +62,7 @@ namespace vistaE
             // 
             this.lblfecha.AutoSize = true;
             this.lblfecha.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblfecha.Location = new System.Drawing.Point(216, 159);
+            this.lblfecha.Location = new System.Drawing.Point(480, 168);
             this.lblfecha.Name = "lblfecha";
             this.lblfecha.Size = new System.Drawing.Size(264, 20);
             this.lblfecha.TabIndex = 2;
@@ -103,11 +105,31 @@ namespace vistaE
             this.lbltitulo.TabIndex = 6;
             this.lbltitulo.Text = "Lista de Ventas";
             // 
+            // txtbuscarcliente
+            // 
+            this.txtbuscarcliente.Location = new System.Drawing.Point(250, 214);
+            this.txtbuscarcliente.Name = "txtbuscarcliente";
+            this.txtbuscarcliente.Size = new System.Drawing.Size(191, 20);
+            this.txtbuscarcliente.TabIndex = 7;
+            this.txtbuscarcliente.TextChanged += new System.EventHandler(this.txtbuscarcliente_TextChanged);
+            // 
+            // lblbuscarcliente
+            // 
+            this.lblbuscarcliente.AutoSize = true;
+            this.lblbuscarcliente.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblbuscarcliente.Location = new System.Drawing.Point(247, 170);
+            this.lblbuscarcliente.Name = "lblbuscarcliente";
+            this.lblbuscarcliente.Size = new System.Drawing.Size(120, 18);
+            this.lblbuscarcliente.TabIndex = 8;
+            this.lblbuscarcliente.Text = "Buscar cliente:";
+            // 
             // listar_ventas
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 661);
+            this.Controls.Add(this.lblbuscarcliente);
+            this.Controls.Add(this.txtbuscarcliente);
             this.Controls.Add(this.lbltitulo);
             this.Controls.Add(this.lblidventa);
             this.Controls.Add(this.lblidseleccionado);
@@ -136,5 +158,7 @@ namespace vistaE
         private System.Windows.Forms.Label lblidseleccionado;
         private System.Windows.Forms.Label lblidventa;
         private System.Windows.Forms.Label lbltitulo;
+        private System.Windows.Forms.TextBox txtbuscarcliente;
+        private System.Windows.Forms.Label lblbuscarcliente;
     }
 }

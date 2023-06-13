@@ -41,10 +41,10 @@ namespace negocio
                     return lista;
 
                 }
-                catch (Exception ex)
+                catch (Exception )
                 {
-                    throw ex;
-                }
+                throw ;
+            }
                 finally
                 {
                     datos.cerrarConexion();
@@ -124,7 +124,7 @@ namespace negocio
 
             try
             {
-                string consulta = "SELECT ID, Cliente, Telefono, Correo FROM clientes WHERE Cliente LIKE '%' + @FiltroCliente + '%'";
+                string consulta = "SELECT ID, Cliente, Telefono, Correo FROM clientes WHERE Cliente LIKE '%' + @FiltroCliente + '%' OR Correo LIKE '%' + @FiltroCliente + '%'";
                 datos.setearConsulta(consulta);
                 datos.SetearParametro("@FiltroCliente", filtroCliente);
 

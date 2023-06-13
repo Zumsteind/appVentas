@@ -28,5 +28,11 @@ namespace vistaE
 
 
         }
+
+        private void txtbuscarproducto_TextChanged(object sender, EventArgs e)
+        {
+            NegocioProducto negocio = new NegocioProducto();
+            dgvproductos.DataSource = negocio.buscarProductos(txtbuscarproducto.Text);
+        }
     }
 }

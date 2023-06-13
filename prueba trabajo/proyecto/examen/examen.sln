@@ -3,8 +3,6 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.32228.343
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vistas", "vistas\vistas.csproj", "{6DC4DB36-F2A5-4799-8BD4-5EE9CC9233FB}"
-EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "negocio", "negocio\negocio.csproj", "{CD247207-CFE1-40DE-B885-92F5FF125A8E}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "datos", "datos\datos.csproj", "{62F3D32B-530D-4E3A-9C38-71F89AA08423}"
@@ -13,16 +11,17 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "entidades", "entidades\enti
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "vistaE", "vistaE\vistaE.csproj", "{73CC2C24-36B0-40FE-AACD-31277AD6052D}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "scripts", "scripts", "{706BCF3A-C93D-4A10-A412-D3337643DA89}"
+	ProjectSection(SolutionItems) = preProject
+		pruebademo.sql = pruebademo.sql
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{6DC4DB36-F2A5-4799-8BD4-5EE9CC9233FB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{6DC4DB36-F2A5-4799-8BD4-5EE9CC9233FB}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{6DC4DB36-F2A5-4799-8BD4-5EE9CC9233FB}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{6DC4DB36-F2A5-4799-8BD4-5EE9CC9233FB}.Release|Any CPU.Build.0 = Release|Any CPU
 		{CD247207-CFE1-40DE-B885-92F5FF125A8E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{CD247207-CFE1-40DE-B885-92F5FF125A8E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{CD247207-CFE1-40DE-B885-92F5FF125A8E}.Release|Any CPU.ActiveCfg = Release|Any CPU

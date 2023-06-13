@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <asmv1:assembly xsi:schemaLocation="urn:schemas-microsoft-com:asm.v1 assembly.adaptive.xsd" manifestVersion="1.0" xmlns:asmv1="urn:schemas-microsoft-com:asm.v1" xmlns="urn:schemas-microsoft-com:asm.v2" xmlns:asmv2="urn:schemas-microsoft-com:asm.v2" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:co.v1="urn:schemas-microsoft-com:clickonce.v1" xmlns:asmv3="urn:schemas-microsoft-com:asm.v3" xmlns:dsig="http://www.w3.org/2000/09/xmldsig#" xmlns:co.v2="urn:schemas-microsoft-com:clickonce.v2">
-  <asmv1:assemblyIdentity name="vistaE.exe" version="1.0.0.1" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
+  <asmv1:assemblyIdentity name="vistaE.exe" version="1.0.0.3" publicKeyToken="0000000000000000" language="neutral" processorArchitecture="msil" type="win32" />
   <application />
   <entryPoint>
     <assemblyIdentity name="vistaE" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
@@ -49,7 +49,7 @@
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>k2o9/yr343MvB09pOM0N6I8BJv3XS6g0SZVjCxS7tu8=</dsig:DigestValue>
+        <dsig:DigestValue>0+qKUMkqZI+yRQBMb1tZc+MS2hFPqYdLDFPgxeXMx/U=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
@@ -66,36 +66,36 @@
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="negocio.dll" size="17408">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="negocio.dll" size="18944">
       <assemblyIdentity name="negocio" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>BUXVft4SOU/bJA/sBfbL45KnsPgQ1cJBPUmf2MYcvPU=</dsig:DigestValue>
+        <dsig:DigestValue>Jl/Rj2dlTmBxSKEi+6QjLvRQEsL1Lg/MsduDhkGrB2I=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
   <dependency>
-    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="vistaE.exe" size="49592">
+    <dependentAssembly dependencyType="install" allowDelayedBinding="true" codebase="vistaE.exe" size="52152">
       <assemblyIdentity name="vistaE" version="1.0.0.0" language="neutral" processorArchitecture="msil" />
       <hash>
         <dsig:Transforms>
           <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
         </dsig:Transforms>
         <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-        <dsig:DigestValue>gbSJBP+SESb25sSePlKfqGyMRyZNtBWOp/0cBJrTiQQ=</dsig:DigestValue>
+        <dsig:DigestValue>AQ56Ys/RrAmel1bHjy5IY5hQKRycLsVVSyMZ6A9WKis=</dsig:DigestValue>
       </hash>
     </dependentAssembly>
   </dependency>
-  <file name="vistaE.exe.config" size="362">
+  <file name="vistaE.exe.config" size="354">
     <hash>
       <dsig:Transforms>
         <dsig:Transform Algorithm="urn:schemas-microsoft-com:HashTransforms.Identity" />
       </dsig:Transforms>
       <dsig:DigestMethod Algorithm="http://www.w3.org/2000/09/xmldsig#sha256" />
-      <dsig:DigestValue>+FjHmDI5M9Rvvy3u4r0yQ7jmt7bJoScfoHZVpvNQVZs=</dsig:DigestValue>
+      <dsig:DigestValue>HDmYHVMZZugROE2tYsBTxANpnWCbhTypmLcpUp/pYF8=</dsig:DigestValue>
     </hash>
   </file>
 </asmv1:assembly>

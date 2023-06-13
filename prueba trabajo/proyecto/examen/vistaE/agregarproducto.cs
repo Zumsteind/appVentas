@@ -58,6 +58,11 @@ namespace vistaE
             if (negocio.AgregarProducto(x))
             {
                 MessageBox.Show("Producto agregado con éxito");
+                txtnombre.Text = "";
+                txtprecio.Text = "0";
+                txtcategoria.Text = "";
+
+
             }
             else
             {

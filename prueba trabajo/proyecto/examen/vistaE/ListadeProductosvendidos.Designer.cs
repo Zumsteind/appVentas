@@ -32,6 +32,7 @@ namespace vistaE
             this.dgvproductosvendidos = new System.Windows.Forms.DataGridView();
             this.lblidventa = new System.Windows.Forms.Label();
             this.lblid = new System.Windows.Forms.Label();
+            this.lbltitulo = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvproductosvendidos)).BeginInit();
             this.SuspendLayout();
             // 
@@ -62,11 +63,22 @@ namespace vistaE
             this.lblid.Size = new System.Drawing.Size(0, 20);
             this.lblid.TabIndex = 2;
             // 
+            // lbltitulo
+            // 
+            this.lbltitulo.AutoSize = true;
+            this.lbltitulo.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lbltitulo.Location = new System.Drawing.Point(136, 64);
+            this.lbltitulo.Name = "lbltitulo";
+            this.lbltitulo.Size = new System.Drawing.Size(405, 31);
+            this.lbltitulo.TabIndex = 3;
+            this.lbltitulo.Text = "Lista de productos de la venta";
+            // 
             // ListadeProductosvendidos
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(934, 661);
+            this.Controls.Add(this.lbltitulo);
             this.Controls.Add(this.lblid);
             this.Controls.Add(this.lblidventa);
             this.Controls.Add(this.dgvproductosvendidos);
@@ -87,5 +99,6 @@ namespace vistaE
         private System.Windows.Forms.DataGridView dgvproductosvendidos;
         private System.Windows.Forms.Label lblidventa;
         private System.Windows.Forms.Label lblid;
+        private System.Windows.Forms.Label lbltitulo;
     }
 }
